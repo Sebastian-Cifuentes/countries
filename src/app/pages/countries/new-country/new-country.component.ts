@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CountriesService } from 'src/app/services/countries.service';
+import { FormErrorService } from 'src/app/services/form-error-service.service';
 
 @Component({
   selector: 'app-new-country',
@@ -12,7 +13,8 @@ export class NewCountryComponent {
   form!: FormGroup;
 
   constructor(
-    private _countriesService: CountriesService
+    private _countriesService: CountriesService,
+    public formErrorService: FormErrorService
   ) {
     this.form = new FormGroup({
       id: new FormControl('', Validators.required),
@@ -26,7 +28,10 @@ export class NewCountryComponent {
 
   async save() {
     try {
-      if (this.form.invalid) return;
+      if (this.form.invalid) {
+        this.form.markAllAsTouched();
+        return;
+      };
       const country = {...this.form.value};
       await this._countriesService.create(country);
       this.form.reset();

@@ -8,6 +8,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="id" class="form-control" formControlName="id">
+                <small *ngIf="form.get('id')?.touched && form.get('id')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('id')!, 'Id')}}</small>
               </div>
           </div>
           <div class="mb-3 row">
@@ -16,6 +17,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="countryName" class="form-control" formControlName="countryName">
+                <small *ngIf="form.get('countryName')?.touched && form.get('countryName')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('countryName')!, 'Nombre')}}</small>
               </div>
           </div>
           <div class="mb-3 row">
@@ -24,6 +26,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="population" class="form-control" formControlName="population">
+                <small *ngIf="form.get('population')?.touched && form.get('population')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('population')!, 'Población')}}</small>
               </div>
           </div>
           <div class="mb-3 row">
@@ -32,6 +35,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="capital" class="form-control" formControlName="capital">
+                <small *ngIf="form.get('capital')?.touched && form.get('capital')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('capital')!, 'Capital')}}</small>
               </div>
           </div>
           <div class="mb-3 row">
@@ -40,6 +44,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="continentName" class="form-control" formControlName="continentName">
+                <small *ngIf="form.get('continentName')?.touched && form.get('continentName')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('continentName')!, 'Nombre del continente')}}</small>
               </div>
           </div>
           <div class="mb-3 row">
@@ -48,6 +53,7 @@
               </div>
               <div class="col-10">
                 <input type="text" id="img" class="form-control" formControlName="img">
+                <small *ngIf="form.get('img')?.touched && form.get('img')?.errors" class="text-danger">{{formErrorService.mapErrors(form.get('img')!, 'Url imagen')}}</small>
               </div>
           </div>
           <div class="buttons">
