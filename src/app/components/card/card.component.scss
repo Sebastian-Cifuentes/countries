@@ -1,0 +1,13 @@
+.card {
+    .title {
+        padding: 10px 0 0 10px;
+    }
+    .list-group {
+        margin: 0 10px;
+        border-radius: 5px;
+        .list-group-item {
+            border-right: 1px solid #d2d2d2;
+            border-left: 1px solid #d2d2d2;
+        }
+    }
+}

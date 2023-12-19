@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+}
+
+.pointer {
+    
+}

@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="country.img" class="card-img-top" [alt]="country.countryName">
+    <div class="card-body title">
+      <h5 class="card-title">{{ country.countryName }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Continente: {{ country.continentName }}</li>
+      <li class="list-group-item">Población: {{ country.population }}</li>
+      <li class="list-group-item">Capital: {{ country.capital }}</li>
+    </ul>
+    <div class="card-body">
+      <button class="btn btn-danger" (click)="delete(country.id)">Eliminar</button>
+    </div>
+  </div>

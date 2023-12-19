@@ -1,0 +1,8 @@
+<div class="countries">
+    <h2>Países</h2>
+    <button class="btn-primary btn" routerLink="/countries/new">Agregar país</button>
+    <hr>
+    <div class="grid">
+        <app-card *ngFor="let country of countries" [country]="country" (onchangecountries)="getAll()"></app-card>
+    </div>
+</div>

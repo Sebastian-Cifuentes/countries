@@ -1,0 +1,58 @@
+<div class="country">
+    <h2>Agregar país</h2>
+    <hr>
+    <form [formGroup]="form" (ngSubmit)="save()">
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="id" class="col-form-label">Id</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="id" class="form-control" formControlName="id">
+              </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="countryName" class="col-form-label">Nombre</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="countryName" class="form-control" formControlName="countryName">
+              </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="population" class="col-form-label">Población</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="population" class="form-control" formControlName="population">
+              </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="capital" class="col-form-label">Capital</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="capital" class="form-control" formControlName="capital">
+              </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="continentName" class="col-form-label">Nombre del continente</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="continentName" class="form-control" formControlName="continentName">
+              </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-2">
+                <label for="img" class="col-form-label">Url imagen</label>
+              </div>
+              <div class="col-10">
+                <input type="text" id="img" class="form-control" formControlName="img">
+              </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-primary mr-2" type="submit">Guardar</button>
+            <button type="button" class="btn btn-secondary" routerLink="/countries">Atras</button>
+          </div>
+    </form>
+</div>
